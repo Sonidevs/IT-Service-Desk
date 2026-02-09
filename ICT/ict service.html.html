@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online ICT Help Desk & Learning System</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #0b5ed7;
+            color: white;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 0;
+            color: black; /* Header title black */
+        }
+
+        header p {
+            color: white; /* header description white */
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd43b;
+        }
+
+        section {
+            padding: 45px;
+            border-bottom: 1px solid #eee;
+        }
+
+        h2 {
+            color: #000000; /* default heading color */
+        }
+
+        h3 {
+            color: #000;
+        }
+
+        button {
+            background-color: #ffd43b;
+            color: black;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #0b5ed7;
+            color: white;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        footer {
+            background-color: #0b5ed7;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .highlight {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-left: 5px solid #ffd43b;
+            margin-top: 20px;
+        }
+
+        /* Custom Section Backgrounds & Text Colors */
+        #home {
+            background-color: black;
+            color: #0b5ed7; /* text blue */
+        }
+
+        #home h2 {
+            color: black; /* heading black */
+        }
+
+        #about {
+            background-color: black;
+            color: yellow; /* about section yellow text */
+        }
+
+        #report {
+            background-color: green;
+            color: white;
+        }
+
+        #contact {
+            background-color: #8B4513; /* brown */
+            color: white;
+        }
+
+        /* Online Teaching Nav */
+        #learning {
+            background-color: #f0f0f0;
+        }
+
+        #learning a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #0b5ed7;
+            font-weight: bold;
+        }
+
+        #learning a:hover {
+            color: #ffd43b;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Online ICT Help Desk & Learning System</h1>
+    <p>A centralized platform for ICT support and online teaching</p>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#report">Submit Fault</a>
+        <a href="#faq">FAQs</a>
+        <a href="#contact">Contact</a>
+        <a href="#learning">Online Learning</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home">
+    <h2>Welcome to the ICT Help Desk</h2>
+    <p>
+        This system allows users to report computer, network, and software problems
+        and receive timely technical support from an ICT technician.
+    </p>
+
+    <button onclick="location.href='#report'">Submit a Fault</button>
+    <button onclick="location.href='#services'">View Services</button>
+
+    <div class="highlight">
+        <strong>Target Users:</strong>
+        <ul>
+            <li>Students</li>
+            <li>Staff members</li>
+            <li>Small business clients</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About the System</h2>
+    <p>
+        The Online ICT Help Desk & Learning System is designed to improve efficiency in
+        handling ICT issues and teaching programming skills online.
+    </p>
+
+    <h3>Objectives</h3>
+    <ul>
+        <li>Provide a simple platform for reporting ICT faults</li>
+        <li>Improve response time for ICT support</li>
+        <li>Document common ICT problems and solutions</li>
+        <li>Provide online ICT teaching for students</li>
+        <li>Demonstrate ICT technician skills</li>
+    </ul>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+    <h2>Our ICT Services</h2>
+    <ul>
+        <li><strong>Computer Repair & Maintenance:</strong> Hardware and software troubleshooting.</li>
+        <li><strong>Software Installation:</strong> Windows, MS Office, antivirus, and utilities.</li>
+        <li><strong>Network Setup & Troubleshooting:</strong> Wi-Fi, LAN, and internet issues.</li>
+        <li><strong>Virus Removal:</strong> Malware scanning and system protection.</li>
+        <li><strong>Printer Support:</strong> Installation, sharing, and fault fixing.</li>
+    </ul>
+</section>
+
+<!-- SUBMIT FAULT -->
+<section id="report">
+    <h2>Submit ICT Fault</h2>
+    <p>
+        Please fill in the form below to report an ICT-related problem.
+        Provide clear details to help us resolve the issue faster.
+    </p>
+
+    <!-- FORMSPREE FORM -->
+    <form action="https://formspree.io/f/xpwyqrwd" method="POST">
+        <label>Full Name</label>
+        <input type="text" name="name" placeholder="Enter your full name" required>
+
+        <label>Email / Phone</label>
+        <input type="email" name="_replyto" placeholder="Enter email or phone number" required>
+
+        <label>Department / Location</label>
+        <input type="text" name="department" placeholder="e.g. Office 2, ICT Lab">
+
+        <label>Type of Problem</label>
+        <select name="problem">
+            <option>Computer not starting</option>
+            <option>No internet connection</option>
+            <option>Slow computer</option>
+            <option>Printer problem</option>
+            <option>Software error</option>
+            <option>Other</option>
+        </select>
+
+        <label>Description of the Problem</label>
+        <textarea name="message" rows="5" placeholder="Describe the problem in detail"></textarea>
+
+        <button type="submit">Submit Fault</button>
+    </form>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>How long does support take?</strong><br>Most issues are handled within 24–48 hours.</p>
+    <p><strong>What problems can be reported?</strong><br>Hardware, software, network, and printer issues.</p>
+    <p><strong>Is the service free?</strong><br>Basic ICT support is free. Advanced services may require approval.</p>
+    <p><strong>How can I avoid computer viruses?</strong><br>Use updated antivirus software and avoid suspicious downloads.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact Information</h2>
+    <p><strong>Phone:</strong> 0745324146</p>
+    <p><strong>Email:</strong> naomisoni4064@gmail.com</p>
+    <p><strong>Working Hours:</strong> Monday – Friday, 8:00am – 5:00pm</p>
+</section>
+
+<!-- ONLINE LEARNING -->
+<section id="learning">
+    <h2>Online ICT Learning</h2>
+    <p>Learn ICT programming languages and skills online. Click on a language to get started:</p>
+    <nav>
+        <a href="#">Java</a>
+        <a href="#">Python</a>
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JavaScript</a>
+        <a href="#">C++</a>
+        <a href="#">PHP</a>
+    </nav>
+</section>
+
+<footer>
+    <p>© 2026 Online ICT Help Desk & Learning System</p>
+    <p>Designed as an ICT Technician Project</p>
+</footer>
+
+</body>
+</html>
